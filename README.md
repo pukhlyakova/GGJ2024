@@ -8,4 +8,4 @@ I used the free assets "Fantasy Wooden GUI : Free".  https://assetstore.unity.co
 Globalgamejam: https://globalgamejam.org/games/2024/emoji-translator-1
 Video: https://youtu.be/zVOU7Lz5xQo 
 
-![alt text](https://github.com/pukhlyakova/GGJ2024/1.png)
+![screenshot](https://github.com/pukhlyakova/GGJ2024/blob/main/1.png)
