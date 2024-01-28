@@ -42,9 +42,9 @@ public class GameManager : MonoBehaviour
 
     public List<bool> buttonsState;
 
-    static Quote quote1 = new Quote("Global Game Jam", new List<string>{"Global", "Game", "Jam"}, new List<string>{"Planet", "Gamepad", "Candy"});
-    static Quote quote2 = new Quote("Eat, Sleep, Code, Repeat", new List<string>{"Eat", "Sleep", "Code", "Repeat"}, new List<string>{"Berger", "Zzzzz", "Computer", "Arrows"});
-    static Quote quote3 = new Quote("Work smart, not hard", new List<string>{"Work", "smart", "not", "hard"}, new List<string>{"Brain", "Hammer", "Cross"});
+    static Quote quote1 = new Quote("🌍🎮🎉", new List<string>{"Global", "Game", "Jam"}, new List<string>{"Planet", "Gamepad", "Candy"});
+    static Quote quote2 = new Quote("🍔💤💻🔁", new List<string>{"Eat", "Sleep", "Code", "Repeat"}, new List<string>{"Berger", "Zzzzz", "Computer", "Arrows"});
+    static Quote quote3 = new Quote("🔧💡🧠, ❌🔨", new List<string>{"Work", "smart", "not", "hard"}, new List<string>{"Brain", "Hammer", "Cross"});
 
     // Start is called before the first frame update
     void Start()
