@@ -15,12 +15,20 @@ public class Quote {
         this.allOptions = new List<string>();
         this.allOptions.AddRange(correctAnswer);
         this.allOptions.AddRange(otherOptions);
+        this.allOptions.Sort();
     }
+}
+
+public class ButtonState {
+    public bool isClicked;
+    public string spritePath;
 }
 
 public class GameManager : MonoBehaviour
 {
     public Button translateBtn;
+    public Button buttonPrefab;
+    public GameObject panelToAttachButtonsTo;
     public TMP_Text score;
     public TMP_Text emoji;
 
@@ -38,24 +46,34 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         quoteList = new List<Quote>{quote1, quote2, quote3};
-        seenQuestions++;
-        updateScoreText();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // Do nothing
+        updateScene();
     }
 
     public void TranslateClicked() {
         correctAnswers++;
-        seenQuestions++;
         index = (index + 1) % quoteList.Count;
-        updateScoreText();
+        updateScene();
     }
 
-    private void updateScoreText() {
+    public void selectWord() {
+        // do nothing
+    }
+
+    private void updateScene() {
+        // Clear panel
+        for (var i = panelToAttachButtonsTo.transform.childCount - 1; i >= 0; i--)
+        {
+            Object.Destroy(panelToAttachButtonsTo.transform.GetChild(i).gameObject);
+        }
+        // Add new buttons
+        for (int i = 0; i < quoteList[index].allOptions.Count; ++i) {
+            Button button = (Button)Instantiate(buttonPrefab);
+            button.transform.SetParent(panelToAttachButtonsTo.transform);
+            button.GetComponent<Button>().onClick.AddListener(selectWord);
+            button.GetComponentInChildren<TextMeshProUGUI>().text = quoteList[index].allOptions[i];
+        }
+        emoji.text = quoteList[index].emoji;
         score.text = "Score: " + correctAnswers + "/" + seenQuestions;
+        seenQuestions++;
     }
 }
