@@ -43,13 +43,17 @@ public class GameManager : MonoBehaviour
     public List<bool> buttonsState;
 
     static Quote quote1 = new Quote("🌍🎮🎉", new List<string>{"Global", "Game", "Jam"}, new List<string>{"Planet", "Gamepad", "Candy"});
-    static Quote quote2 = new Quote("🍔💤💻🔁", new List<string>{"Eat", "Sleep", "Code", "Repeat"}, new List<string>{"Berger", "Zzzzz", "Computer", "Arrows"});
-    static Quote quote3 = new Quote("🔧💡🧠, ❌🔨", new List<string>{"Work", "smart", "not", "hard"}, new List<string>{"Brain", "Hammer", "Cross"});
-
+    static Quote quote2 = new Quote("🍔💤💻🔁", new List<string>{"Eat", "Sleep", "Code", "Repeat"}, new List<string>{"Burger", "Zzzzz", "Computer", "Arrows", "Shower"});
+    static Quote quote3 = new Quote("🔧💡🧠, ❌🔨", new List<string>{"Work", "Smart", "Not", "Hard"}, new List<string>{"Brain", "Hammer", "Cross", "Wrench", "Light Bulb"});
+    static Quote quote4 = new Quote("🚫🔁👥", new List<string>{"Don`t", "Repeat", "Yourself"}, new List<string>{"Stop", "Arrows", "People"});
+    static Quote quote5 = new Quote("🤏🔍🤐", new List<string>{"Keep", "It", "Simple", "Stupid"}, new List<string>{"Shut up", "Hand"});
+    static Quote quote6 = new Quote("🐛🚫🔧", new List<string>{"It`s", "Not", "a bug", "It`s", "a feature"}, new List<string>{"Control Knobs", "Shuffle", "Stop", "Battery"});
+    static Quote quote7 = new Quote("📋🔂", new List<string>{"Copy", "Paste"}, new List<string>{"Clipboard", "Arrows"});
+    static Quote quote8 = new Quote("🔧🔨🚀", new List<string>{"Make it", "Work", "Make it", "Right", "Make it", "Fast"}, new List<string>{"Wrench", "Hammer", "Rocket"});
     // Start is called before the first frame update
     void Start()
     {
-        quoteList = new List<Quote>{quote1, quote2, quote3};
+        quoteList = new List<Quote>{quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8};
         UpdateScene();
     }
 
